@@ -17,7 +17,7 @@ $green: #529ecc;
 
 #documents {
   .document {
-    background: #78594b;
+    background: #3b5998;
     width: 90%;
     min-height: 100px;
     margin: 1rem 1%;
@@ -60,7 +60,7 @@ $green: #529ecc;
 #doc_show {
   .title {
     @include bold_font;
-    color: #78594b;
+    color: #3b5998;
     font-size: 2rem;
     margin-bottom: 1.25rem;
     padding-bottom: 1rem;
