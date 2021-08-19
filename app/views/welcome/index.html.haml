@@ -1,1 +1,18 @@
-%h1 Welcome to Edynak Basic File Cabinet
+#banner
+  .banner_content
+    %h1 Welcome to Edynak File Cabinet
+    %p Keep what's important safe and organized!
+    %button= link_to "Sign up", new_user_registration_path
+
+#callouts
+  .callout_inner
+    .wrapper
+      .callout
+        %h2 Organize safely and securely
+        %p Be it a personal blog, thoughts, todo lists, or even a journal, Edynak File Cabinet is trusted by millions as their preferend online storage platform.
+
+#bottom_cta
+  .wrapper
+    %h2 Give us a try!
+    %br
+    %button= link_to "Join Now", new_user_registration_path

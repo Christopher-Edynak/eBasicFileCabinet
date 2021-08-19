@@ -1,0 +1,25 @@
+!!!
+%html
+%head
+  %title Edynak File Cabinet | Keep what's important safe and organized!
+  %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+  = csrf_meta_tags
+  = csp_meta_tag
+  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+  = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+%body
+  %header
+    %header_inner
+      = link_to "Edynak File Cabinet", root_path, {:style=>'width: 500px; float: left; font-weight: bold; color: white; font-size: 2rem;'}
+
+      %nav
+        - if user_signed_in?
+          = link_to "Create Document", new_document_path, {:style=>'color:white; float:right; font-size: 1.1rem; line-height: 1.5; margin-left: 1rem;'}
+          = link_to "Sign Out", destroy_user_session_path, method: :delete
+        - else
+          = link_to "Log In", new_user_session_path, {:style=>'color:white; float:right;'}
+
+  %p.notice= notice
+  %p.alert= alert
+
+  = yield
